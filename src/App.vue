@@ -122,6 +122,10 @@
   }
 </script>
 
+<style lang="stylus">
+    @import './stylus/main.styl'
+</style>
+
 <style>
 	body {
     padding-top: constant(safe-area-inset-top);
