@@ -5,6 +5,7 @@
         :clipped="$vuetify.breakpoint.mdAndUp"
         app
         v-model="drawer"
+        mobile-break-point="960"
         >
 
         <v-layout wrap>
@@ -23,7 +24,7 @@
         </v-layout>
 
         <v-divider></v-divider>
-        <v-list class="pt-0">
+        <v-list>
             <v-list-tile v-for="(item, i) in items" :key="i" @click="">
                 <v-list-tile-avatar>
                     <v-icon>{{ item.icon }}</v-icon>
@@ -41,7 +42,7 @@
         <v-divider></v-divider>
 
 
-        <v-list>
+        <v-list subheader>
           <v-list-group
             no-action
           >
@@ -67,15 +68,13 @@
 
                       <v-list-tile @click="">
                           <v-icon>visibility</v-icon>
-                          <v-list-title>Show</v-list-title>
+                          <v-list-tile-title>Show</v-list-tile-title>
                       </v-list-tile>
 
                       <v-divider></v-divider>
                       <v-list-tile @click="">
-                          <v-list-tile-title>
                           <v-icon>delete</v-icon>
-                          <v-list-title>Delete</v-list-title>
-                      </v-list-tile-title>
+                          <v-list-tile-title>Delete</v-list-tile-title>
                       </v-list-tile>
 
                     </v-list>
@@ -100,6 +99,17 @@
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <span v-text="title"></span>
     </v-toolbar-title>
+
+    <v-spacer></v-spacer>
+    <v-toolbar-items>
+        <v-btn fab dark icon>
+          <v-icon dark>add</v-icon>
+        </v-btn>
+        <v-btn fab dark icon>
+          <v-icon dark>autorenew</v-icon>
+        </v-btn>
+    </v-toolbar-items>
+
 </v-toolbar>
 <v-content>
 
@@ -107,7 +117,7 @@
 
 </v-content>
 <v-footer :fixed="fixed" app>
-    <span>&copy; 2018</span>
+    <span class="mx-3">&copy; 2018</span>
 </v-footer>
 </v-app>
 </template>

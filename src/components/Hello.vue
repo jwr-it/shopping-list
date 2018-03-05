@@ -4,85 +4,85 @@
       <v-flex xs12>
         <v-card color="secondary">
           <v-card-text class="px-0 py-0">
-              <v-subheader inset dark class="title black--text">Biedronka</v-subheader>
+              <v-subheader inset dark class="title black--text">
+                  Biedronka
+                  <v-spacer></v-spacer>
+                  <v-btn fab light icon>
+                    <v-icon>remove_shopping_cart</v-icon>
+                  </v-btn>
+              </v-subheader>
           </v-card-text>
           <v-list two-line subheader>
-            <v-list-tile avatar>
+            <v-list-tile href="javascript:;">
               <v-list-tile-action>
-                <v-checkbox v-model="notifications"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>Notifications</v-list-tile-title>
                 <v-list-tile-sub-title>Allow notifications</v-list-tile-sub-title>
               </v-list-tile-content>
-              <v-list-tile-action>
 
-
-
-                    <div class="text-xs-center hidden-sm-and-down">
-                        <v-btn fab dark small color="accent">
-                          <v-icon dark>arrow_downward</v-icon>
-                        </v-btn>
+              <v-list-tile-action class="hidden-sm-and-down">
+                  <div class="text-xs-center">
                       <v-btn fab dark small color="accent">
-                        <v-icon dark>arrow_upward</v-icon>
+                        <v-icon dark>arrow_downward</v-icon>
                       </v-btn>
+                    <v-btn fab dark small color="accent">
+                      <v-icon dark>arrow_upward</v-icon>
+                    </v-btn>
 
-                      <v-btn fab dark small color="error">
-                        <v-icon dark>delete</v-icon>
-                      </v-btn>
+                    <v-btn fab dark small color="error">
+                      <v-icon dark>delete</v-icon>
+                    </v-btn>
+                  </div>
+              </v-list-tile-action>
 
-                    </div>
-                  
-
-
-
-                  <v-menu bottom offset-y class="hidden-md-and-up">
+              <v-list-tile-action class="hidden-md-and-up">
+                  <v-menu bottom offset-y>
                     <v-btn flat icon slot="activator">
                         <v-icon>more_vert</v-icon>
                     </v-btn>
                     <v-list>
                       <v-list-tile @click="">
                           <v-icon>arrow_upward</v-icon>
-                          <v-list-title>Up</v-list-title>
+                          <v-list-tile-title>Up</v-list-tile-title>
                       </v-list-tile>
                       <v-list-tile @click="">
                           <v-icon>arrow_downward</v-icon>
-                          <v-list-title>Down</v-list-title>
+                          <v-list-tile-title>Down</v-list-tile-title>
                       </v-list-tile>
 
                       <v-divider></v-divider>
                       <v-list-tile @click="">
-                        <v-list-tile-title>
                             <v-icon>delete</v-icon>
-                            <v-list-title>Delete</v-list-title>
-                        </v-list-tile-title>
+                            <v-list-tile-title>Delete</v-list-tile-title>
                       </v-list-tile>
 
                     </v-list>
                   </v-menu>
               </v-list-tile-action>
             </v-list-tile>
-            <v-list-tile avatar>
+            <v-list-tile href="javascript:;">
               <v-list-tile-action>
-                <v-checkbox v-model="sound"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>Sound</v-list-tile-title>
                 <v-list-tile-sub-title>Hangouts message</v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar>
+            <v-list-tile href="javascript:;">
               <v-list-tile-action>
-                <v-checkbox v-model="video"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>Video sounds</v-list-tile-title>
                 <v-list-tile-sub-title>Hangouts video call</v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile avatar>
+            <v-list-tile href="javascript:;">
               <v-list-tile-action>
-                <v-checkbox v-model="invites"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>Invites</v-list-tile-title>
@@ -93,20 +93,26 @@
 
           <v-divider ></v-divider>
 
-
-          <v-layout row wrap>
+          <v-layout row wrap >
                 <v-flex xs11>
                     <v-text-field
                       prepend-icon="add_shopping_cart"
                       label="Name"
                       class="mx-3"
                       flat
-                      hide-details="true"
+                      hide-details
                     ></v-text-field>
                 </v-flex>
 
         </v-layout>
-          <v-btn block color="teal" dark><v-icon>add</v-icon>Add new</v-btn>
+
+        <v-list two-line subheader>
+            <v-list-tile-action>
+                 <v-btn block color="teal" dark><v-icon>add</v-icon>Add new</v-btn>
+            </v-list-tile-action>
+        </v-list>
+
+
 
           <v-divider ></v-divider>
 
@@ -115,7 +121,7 @@
           <v-list>
             <v-list-tile>
               <v-list-tile-action>
-                <v-checkbox v-model="notifications"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title class="striked grey--text">Notifications</v-list-tile-title>
@@ -123,7 +129,7 @@
             </v-list-tile>
             <v-list-tile>
               <v-list-tile-action>
-                <v-checkbox v-model="sound"></v-checkbox>
+                <v-checkbox></v-checkbox>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title class="striked grey--text">Sound</v-list-tile-title>
@@ -138,13 +144,24 @@
             fab
             dark
             fixed color="teal">
-          <v-icon dark>reorder</v-icon>
+          <v-icon dark>autorenew</v-icon>
         </v-btn>
-
       </v-flex>
     </v-layout>
   </v-container>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        notifications: false,
+        sound: true,
+        widgets: false
+      }
+    }
+  }
+</script>
 
 <style lang="stylus">
 .striked {
